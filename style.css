@@ -1,0 +1,174 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: "Indie Flower", cursive;
+}
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    text-align: center;
+    padding: 20px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Main Container */
+.container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    border: 3px solid #ffb6c1;
+}
+
+/* Title */
+h1 {
+    color: #d63384;
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Letters Grid */
+.letters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Letter Design */
+.letter {
+    width: 150px;
+    height: 100px;
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #fff;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Letter Hover Effect */
+.letter:hover {
+    transform: scale(1.08);
+    box-shadow: 0px 8px 18px rgba(255, 120, 150, 0.4);
+    background: linear-gradient(to bottom, #ff9a9e, #ff758c);
+}
+
+/* Hidden Messages */
+.hidden-message {
+    display: none;
+}
+
+/* Pop-up & Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+}
+
+/* Pop-up Window */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.85);
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 20;
+    border: 3px solid #ff7eb3;
+}
+
+/* Pop-up Content */
+.popup-content {
+    max-height: 250px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.popup-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.popup-content::-webkit-scrollbar-thumb {
+    background: #ff7eb3;
+    border-radius: 6px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #ff7eb3;
+}
+
+/* Cute Close Button Hover */
+.close-btn:hover {
+    color: #ff4f73;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .letter {
+        width: 120px;
+        height: 90px;
+        font-size: 12px;
+    }
+
+    .popup {
+        width: 95%;
+    }
+}

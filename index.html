@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Letters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  
+  <audio id="background-music" loop>
+    <source src="blue.mp3" type="audio/mp3">
+  </audio>
+  
+    <div class="container">
+        <h1>Hi Honey, This Is My Random Letter for You 🥰❤️</h1>
+        <p>Each letter, Honeyy, contains something I find hard to say in person. I hope these messages bring you joy and remind you of how much I cherish you.</p>
+        
+        <div class="letters">
+            <div class="letter" data-title="THANK YOU">
+                <span>THANK YOU</span>
+                <div class="hidden-message">
+                    <p>Thank you for everything you do for me. I appreciate all of your efforts, understanding, and patience for me. I'm so lucky to have you in my life, the reason why I like to wake up every day. Thank you for all the motivation you gave me even though you didn't know. I know makulet ako minsan, baliw, sira ulo, eh you always take care of me when I didn't care about myself. So thank you so much, honeyyy.</p>
+                </div>
+            </div>
+            <div class="letter" data-title="Sorry">
+                <span>SORRY</span>
+                <div class="hidden-message">
+                    <p>I'm sorry kung kadalasan clueless ako sa nagawa ko. Sorry kung sobrang slow ko at di ko agad nagegets. I'm so sorry po kung nasasaktan kita ng di ko alam honey🥺. Patuloy mo po sana akong patawarin, honey. Di ko man po masasabi na mababago ko agad yun eh, sana po antayin mong mabago ko.</p> <p>I love you so much.</p>
+                </div>
+            </div>
+            <div class="letter" data-title="A Promise">
+                <span>PROMISE</span>
+                <div class="hidden-message">
+                    <p>Honeyy, this is my promise to you. I promise that no matter what happens, I'll be honest, faithful, loyal, and love you all the time. Even if you get mad at me when I say the truth,i don't hesitate to say it to you. I'll be here by your side everytime you need me.</p>
+                </div>
+            </div>
+            <div class="letter" data-title="Random Facts">
+                <span>RANDOM FACTS</span>
+                <div class="hidden-message">
+                    <p>1. Mabilis ako mag selos di ko lang want ipahalata.</p>
+                    <p>2. Mabilis den akong magdamdam and maiyak.</p>
+                    <p>3. Sobrang saya ko kahit sa maliliit na bagay even simple na "kumusta".</p>
+                    <p>4. Mahilig Ako kumain hehe obvious naman. Pera ko sa pagkain nauubos 🥹.</p>
+                    <p>5. Sobrang bilis kong magtiwala and maniwala at gustong gusto ko ren nakakatulong kahit sa mga simple na bagay.</p>
+                </div>
+            </div>
+            <div class="letter" data-title="Things that I like about you">
+                <span>THINGS I LIKE ABOUT YOU</span>
+                <div class="hidden-message">
+                    <p>First of all, I like you the way you are, but here are some special mentions:</p>
+                    <p>I like your hair to be honest, natutuwa talaga ako sa buhok mo 🥰 Question lang, kulot din ba yung other hair mo? (De joke lang 😘)</p>
+                    <p>I like how you treat me like a child. Sayo lang lumalabas pagiging bata ko, kaya thank you po!</p>
+                    <p>I like your personality and how much you care about the people around you  </p>
+                    <p>I have so many more things that I like about you, but di na kasya kaya eto <tag>
+                      <!--Tab to edit-->
+                    </tag>muna 🥹.</p>
+                </div>
+            </div>
+            <div class="letter" data-title="STORYTIME">
+                <span>STORY TIME</span>
+                <div class="hidden-message">
+                    <p>You know honey, after my last break up sabi ko magbibike na lang ako and lilibangin ko sarili ko until i met you again and everything came to life. Actually aamin sana ako sayo non nung g9 kaso nalaman ko may bf ka i think yun yung pag kaka alam ko dati naman like yung nakita mo sa convo natin na mga pic para na tayong mag gf/bf non naka couple avatar ganan pero label masaya lang HAHAHAHAH but this time they gave me a chance to confess yung matagal ko ng tinatago. I like you that much na bumalik nung nakita at nakausap ulit kita so <b></p><p>I don't want to lose you again.</p><p>I love you honeyy. I love you so much.</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up Modal -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <h2 id="popup-title"></h2>
+        <div class="popup-content" id="popup-message"></div>
+    </div>
+
+    <script>
+        // Ensure audio starts playing
+        document.addEventListener("DOMContentLoaded", function () {
+            let audio = document.getElementById("background-music");
+
+            // Try to play immediately
+            let playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.catch(() => {
+                    // If autoplay is blocked, wait for user interaction
+                    document.addEventListener("click", function () {
+                        audio.play();
+                    }, { once: true });
+                });
+            }
+        });
+    </script>
+
+    <script src="main.js"></script>
+</body>
+</html>
